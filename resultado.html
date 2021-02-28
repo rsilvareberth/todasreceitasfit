@@ -10,24 +10,29 @@
 <body>
 
 <img src="img/tmblogo.png" style="width:50%;" class="center">
-<div class="container">
-  <h2>RESULTADO:</h2> 
+<div class="container" id="resultado">
+  <h2>@todasreceitasfit</h2>
+  <h2>RESULTADO TMB:</h2> 
       <div id="tmb"></div>
       <div id="benedict"></div>
       <div id="low"></div>
       <div id="high"></div>
 </div>
 <div class="row">
-  copiarTexto
+  
   <input type="submit" value="Recalcular" style="margin-top: 10px;" onclick="goback()">
-  <input type="text" id="link" name="link" > <button onClick="copiarTexto()">Copiar Texto</button>
-</div>
+  <input type="submit" value="Copiar resultado" style="margin-top: 10px;" onclick="CopyToClipboard('resultado')">
 
+<br /><br />
+
+</div>
+  
   <script src="main.js"></script>
   <script>
   function goback() {
     location.href = 'index.html';
   }
     </script>
+
 </body>
 </html>

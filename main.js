@@ -50,12 +50,20 @@ function high(tmbBenedict){
   return tmbBenedict * 1.15;
 }
 
-function copiarTexto() {
-    var textoCopiado = document.getElementById("container");
-    textoCopiado += " Siga nosso perfil para mais dicas fitness @todasreceitasfit";
-    textoCopiado.select();
-    document.execCommand("Copy");
-    alert("Resultado copiado!");
+function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    
+  }
+  alert('Copiado!');
 }
 
 function calcularBenedict(tmbBase, benedict){
