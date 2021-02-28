@@ -50,6 +50,13 @@ function high(tmbBenedict){
   return tmbBenedict * 1.15;
 }
 
+function copiarTexto() {
+    var textoCopiado = document.getElementById("container");
+    textoCopiado += " Siga nosso perfil para mais dicas fitness @todasreceitasfit";
+    textoCopiado.select();
+    document.execCommand("Copy");
+    alert("Resultado copiado!");
+}
 
 function calcularBenedict(tmbBase, benedict){
   
