@@ -63,7 +63,17 @@ function CopyToClipboard(containerid) {
     document.execCommand("copy");
     
   }
-  alert('Copiado!');
+  btnCopiarAction();
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function btnCopiarAction(){
+  $('#btnCopiar').val('Copiado!');
+    await sleep(300);
+  $('#btnCopiar').val('Copiar resultado');
 }
 
 function calcularBenedict(tmbBase, benedict){
